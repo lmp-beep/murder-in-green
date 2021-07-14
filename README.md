@@ -1,5 +1,23 @@
 # murder-in-green
+![License badge](https://img.shields.io/badge/License-MIT-blue.svg)
 
-Bonjour!
-Hi
-Hallo
+## Description 
+
+
+## Technology
+
+
+## Usage
+
+
+## Contributions
+- Savannah Fortson | Github : SavannahF
+- Nadia Dorado | Github : ndorado3
+- Andrew Patison | Github: acpatison
+- Lisa Pessin | Github: lmp-beep
+
+## License
+MIT
+
+
+
