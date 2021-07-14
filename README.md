@@ -11,8 +11,13 @@
 
 
 ## Contributions
-
+- Savannah Fortson | Github : SavannahF
+- Nadia Dorado | Github : ndorado3
+- Andrew Patison | Github: acpatison
+- Lisa Pessin | Github: lmp-beep
 
 ## License
 MIT
+
+
 
