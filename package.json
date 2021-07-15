@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "create-react-app": "^4.0.3"
+  },
+  "name": "22-murderingreen",
+  "description": "![License badge](https://img.shields.io/badge/License-MIT-blue.svg)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmp-beep/murder-in-green.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lmp-beep/murder-in-green/issues"
+  },
+  "homepage": "https://github.com/lmp-beep/murder-in-green#readme"
+}
