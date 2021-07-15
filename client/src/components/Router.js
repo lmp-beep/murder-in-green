@@ -2,9 +2,9 @@ import React from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 import Header from "./Header";
-import Home from "./pages/home";
-import LoginForm from "./pages/LoginForm";
-import SignupForm from "./pages/SignupForm";
+import Home from "./home";
+import LoginForm from "../pages/LoginForm";
+import SignupForm from "../pages/SignupForm";
 import Footer from "./Footer";
 
 export default function App() {
