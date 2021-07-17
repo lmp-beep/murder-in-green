@@ -5,12 +5,16 @@ import Header from "./Header";
 import Home from "./home";
 import LoginForm from "../pages/LoginForm";
 import SignupForm from "../pages/SignupForm";
-import Footer from "./Footer";
+// import Footer from "./Footer";
+import Navbar from "./Navbar";
+
+import { Grid, Row, Col } from "react-bootstrap";
 
 export default function App() {
   return (
     <Router>
       <div>
+        <Navbar />
         <Header />
         <div>
           <Switch>
@@ -25,7 +29,6 @@ export default function App() {
             </Route>
           </Switch>
         </div>
-        <Footer />
       </div>
     </Router>
   );

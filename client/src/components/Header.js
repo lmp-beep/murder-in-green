@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./css/header.css";
 import title from "../images/title.png";
 
 function Header() {
