@@ -1,0 +1,70 @@
+[
+    {
+        "id": 1,
+        "text": "What type of Crime do you want to commit?",
+        "type": "single-select",
+        "required": true,
+        "options": [
+            "Murder",
+            "Kidnapping",
+            "Bank Robbery"
+        ]
+    },
+    {
+        "id": 2,
+        "text": "What type of weapon will you use to commit your crime?",
+        "type": "single-select",
+        "required": true,
+        "options": [
+            "Gun",
+            "Knife",
+            "Wooden Club/Bat"
+        ]
+    },
+    {
+        "id": 3,
+        "text": "What transportation will you use to make your getaway?",
+        "type": "single-select",
+        "required": true,
+        "options": [
+            "Car",
+            "Train",
+            "Run",
+            "Bus"
+        ]
+    },
+    {
+        "id": 4,
+        "text": "Which supply will be needed execute your crime?",
+        "type": "single-select",
+        "required": true,
+        "options": [
+            "Tape",
+            "Rope",
+            "Chloraform"
+        ]
+    },
+    {
+        "id": 5,
+        "text": "Where will you commit your crime?",
+        "type": "single-select",
+        "required": true,
+        "options": [
+            "Abandoned warehouse",
+            "Office building",
+            "Outside",
+            "At someones home/apartment"
+        ]
+    },
+    {
+        "id": 6,
+        "text": "How will you dispose of the evidence?",
+        "type": "single-select",
+        "required": true,
+        "options": [
+            "Burn all evidence",
+            "Throw it in a dumpster",
+            "Bury it in the woods"
+        ]
+    }
+]
