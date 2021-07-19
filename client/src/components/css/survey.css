@@ -1,0 +1,28 @@
+/* styling options */
+.survey-text{
+    color: whitesmoke;
+}
+
+
+/* The answer selecteed by the user */
+.selected {
+    background-color: #007E18 ;
+}
+
+/* The list of options */
+.options {
+    padding: 8px;
+    border: 2px solid  #007E18;
+    cursor: pointer;
+    /* background-color: #007e172d; */
+}
+
+ul {
+    list-style-type: none;
+}
+
+body{
+    font-family: Verdana;
+    font-size: 18px;
+    background-color: #2980B9; 
+}

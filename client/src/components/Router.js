@@ -5,10 +5,11 @@ import Header from "./Header";
 import Home from "./home";
 import LoginForm from "../pages/LoginForm";
 import SignupForm from "../pages/SignupForm";
+import Survey from "../pages/Survey";
 // import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-import { Grid, Row, Col } from "react-bootstrap";
+// import { Grid, Row, Col } from "react-bootstrap";
 
 export default function App() {
   return (
@@ -26,6 +27,12 @@ export default function App() {
             </Route>
             <Route exact path="/SignupForm">
               <SignupForm />
+            </Route>
+            <Route exact path="/Survey">
+              <Survey />
+            </Route>
+            <Route path="*">
+              <Home />
             </Route>
           </Switch>
         </div>
