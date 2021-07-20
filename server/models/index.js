@@ -1,4 +1,4 @@
-const Users = require('./Users');
+const Users = require('./User');
 const Surveys = require('./Survey');
 
 module.exports = { 
