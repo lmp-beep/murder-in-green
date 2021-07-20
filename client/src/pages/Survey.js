@@ -105,24 +105,30 @@ export default class Survey extends React.Component {
           <img src={fingerprint} className="fingerprint" alt="" />
           <img src={slogan} className="slogan" alt="" />
         </div>
-        <Card style={{ width: "30rem", height: "30rem" }}>
+        <Card className="survey-card" style={{ width: "30rem", height: "35rem" }}>
           <Card.Body>
-            <Card.Title>{question}</Card.Title>
+                <h2 className="instructions"> Alias!!! Let's calculate your Carbon FingerPrint one Crime at a time...
+                </h2>
+                <p className="instructionsB"> by choosing one option per question
+                </p>
+                <hr size="5" ></hr>
+            <Card.Title className="question">{question}</Card.Title>
             <Card.Text className= "survey-text">
               {options.map((option) => (
-                <p
-                  key={option.id}
-                  className={`options ${
+                <li
+                key={option.id}
+                className={`options ${
                     userAnswer === option ? "selected" : null
                   }`}
                   onClick={() => this.checkAnswer(option)}
-                >
+                  >
                   {option}
-                </p>
+                </li>
               ))}
             </Card.Text>
             {currentIndex < QuestionsData.length - 1 && (
               <Button
+                className="bt-next"
                 disable={this.state.disabled}
                 onClick={this.nextQuestionHandler}
                 variant="danger"
@@ -132,10 +138,13 @@ export default class Survey extends React.Component {
             )}
             {currentIndex === QuestionsData.length - 1 && (
               <Button
+                className="bt-next"
                 disable={this.state.disabled}
                 onClick={this.finishHandler}
+                variant="danger"
+
               >
-                The End
+                Submit
               </Button>
             )}
           </Card.Body>
