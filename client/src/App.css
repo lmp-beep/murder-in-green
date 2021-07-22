@@ -78,13 +78,3 @@ li a {
 li a:hover {
 	color: darkgray;
 }
-
-.madeUpHeight {
-	height: 500px;
-	border: 5px solid blue;
-	background-color: #767373d4;
-}
-
-.w-100 {
-	width: 100%;
-}
