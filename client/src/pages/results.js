@@ -31,4 +31,3 @@ export default function Results () {
 // suggestions to lower score
 
 // retake quiz button
-
