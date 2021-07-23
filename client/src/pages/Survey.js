@@ -107,7 +107,7 @@ export default class Survey extends React.Component {
         </div>
         <Card className="survey-card" style={{ width: "30rem", height: "35rem" }}>
           <Card.Body>
-                <h2 className="instructions"> Alias!!! Let's calculate your Carbon FingerPrint one Crime at a time...
+                <h2 className="instructions"> Alias!!! <br></br>Let's calculate your Carbon FingerPrint one Crime at a time...
                 </h2>
                 <p className="instructionsB"> by choosing one option per question
                 </p>

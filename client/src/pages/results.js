@@ -2,6 +2,7 @@ import React from "react";
 // import {useQuery } from "@apollo/client";
 
 import { Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 // import {GET_ALIAS} from "../utils/queries";
 
@@ -17,7 +18,7 @@ import victim from "../images/chalk-body.png";
 
 import slogan from "../images/slogan.png";
 import fingerprint from "../images/fingerprint.png";
-import "../App.css"
+import "../App.css";
 // import { QuestionsData } from "../components/QuestionsData";
 
 
@@ -34,20 +35,21 @@ export default function Results () {
 
         <Card style={{ width: '30rem' , height: "30rem"}}>
   <Card.Body>
-    <Card.Title>Thank you !!</Card.Title>
+    <Card.Title>Thank you!!</Card.Title>
     {/* {userData.username} */}
     <Card.Text>
      We have your results...<br/> Your crime will produce (...) CO2 
      
-    <li><img src={weapon} alt="weapon icon" width="40" height="40"/></li> 
-    <li><img src={crimeScene} alt="weapon icon" width="40" height="40"/></li> 
-    <li><img src={transportation} alt="weapon icon" width="40" height="40"/></li> 
-    <li><img src={supplies} alt="weapon icon" width="40" height="40"/></li> 
+    <li><img src={weapon} alt="weapon icon" width="60" height="40"/></li> 
+    <li><img src={crimeScene} alt="weapon icon" width="50" height="40"/></li> 
+    <li><img src={transportation} alt="weapon icon" width="70" height="40"/></li> 
+    <li><img src={supplies} alt="weapon icon" width="55" height="40"/></li> 
     <li><img src={disposal} alt="weapon icon" width="40" height="40"/></li> 
-    <li><img src={victim} alt="weapon icon" width="40" height="40"/></li> 
+    <li><img src={victim} alt="weapon icon" width="50" height="40"/></li> 
      
     </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
+    {/* <Button variant="danger" >Retake Quiz</Button> */}
+    <Link to="/#/Survey#/Survey" className="btn btn-danger">Retake Quiz</Link>
   </Card.Body>
 </Card>
 </div>
@@ -56,10 +58,6 @@ export default function Results () {
 
 // suggestions to lower score
 
-<<<<<<< HEAD
-// retake quiz button
-=======
 // retake quiz button
 
 
->>>>>>> a753cf50815abc7aa56cbc1d3a49c95389404cb7

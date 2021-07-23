@@ -86,7 +86,7 @@ const LoginForm = () => {
           <Form.Label htmlFor="password">Password</Form.Label>
           <Form.Control
             type="password"
-            placeholder="Alias' password"
+            placeholder="Alias's password"
             name="password"
             onChange={handleInputChange}
             value={userFormData.password}
