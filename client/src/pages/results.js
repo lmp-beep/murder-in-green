@@ -18,6 +18,7 @@ import victim from "../images/chalk-body.png";
 import slogan from "../images/slogan.png";
 import fingerprint from "../images/fingerprint.png";
 import "../App.css"
+import "../components/css/results.css"
 // import { QuestionsData } from "../components/QuestionsData";
 
 
@@ -32,18 +33,19 @@ export default function Results () {
         <img src={slogan} className="slogan" alt="" />
       </div>
 
-        <Card style={{ width: '30rem' , height: "30rem"}}>
+        <Card className="results-card" style={{ width: '30rem' , height: "30rem"}}>
   <Card.Body>
-    <Card.Title>Thank you !!</Card.Title>
+
+    <Card.Title className="results-title"   >Thank you !! <br/>  We have your results...
+    <br/> Your crime will produce (...) CO2 </Card.Title>
     {/* {userData.username} */}
-    <Card.Text>
-     We have your results...<br/> Your crime will produce (...) CO2 
+    <Card.Text className="results" >
      
     <li><img src={weapon} alt="weapon icon" width="40" height="40"/></li> 
     <li><img src={crimeScene} alt="weapon icon" width="40" height="40"/></li> 
     <li><img src={transportation} alt="weapon icon" width="40" height="40"/></li> 
     <li><img src={supplies} alt="weapon icon" width="40" height="40"/></li> 
-    <li><img src={disposal} alt="weapon icon" width="40" height="40"/></li> 
+    <li><img src={disposal} alt="weapon icon" width="35" height="35"/></li> 
     <li><img src={victim} alt="weapon icon" width="40" height="40"/></li> 
      
     </Card.Text>
