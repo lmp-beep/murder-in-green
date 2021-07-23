@@ -1,23 +1,43 @@
-import React from "react";
+// Savannah changes
+import React, { useEffect, useState } from "react";
 import "./css/navbar.css";
 import { Link } from "react-router-dom";
+import Nav from "react-bootstrap/Nav";
 
-import Nav from 'react-bootstrap/Nav';
-import mgLogo from "../images/mglogo.png";
-import gitHubRed from "../images/githubred.png";
+import Mglogo from "../images/mglogo.png";
+import Auth from "../utils/auth";
 
-function Navbar() {
-    return (
-        <Nav defaultActiveKey="/home" className="flex-column" >
-          <img src={mgLogo} id="logo" alt="Murdering Green" />
-          <div className = "link-container">
-            {/* <Nav.Link href="/" className="nav-link">Home</Nav.Link> */}
-            <Nav.Link eventKey="/login">Login</Nav.Link>
-            <Nav.Link as={Link} to = "/about-us">About Us</Nav.Link>
-          </div>
-          <img src={gitHubRed} id="gitHub" alt="Git Hub Logo" />
-      </Nav>
-        )
-  }
-  
-  export default Navbar;
+// import SignupForm from "../pages/SignupForm"
+// import LoginForm from "../pages/LoginForm"
+
+const Navbar = () => {
+
+  return (
+    <Nav defaultActiveKey="/home" className="flex-column">
+      <Nav.Link as={Link} to="/">
+        <img
+          src={Mglogo}
+          width="40"
+          height="40"
+          className="d-inline-block align-top"
+          alt="Murdering green logo"
+        />
+      </Nav.Link>
+      {/* display log out, survey when user is log in */}
+      {Auth.loggedIn() ? (
+        <>
+          <Nav.Link as={Link} to="#/Survey">
+            Survey
+          </Nav.Link>
+          <Nav.Link onClick={Auth.logout()}>Log Out</Nav.Link>
+        </>
+      ) : (
+        <Nav.Link as={Link} to="/LoginForm">
+          Log In
+        </Nav.Link>
+      )}
+    </Nav>
+  );
+};
+
+export default Navbar;

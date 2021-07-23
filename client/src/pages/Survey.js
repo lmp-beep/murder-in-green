@@ -4,7 +4,7 @@ import { Card, Button } from "react-bootstrap";
 import {QuestionsData} from "../components/QuestionsData";
 import fingerprint from "../images/fingerprint.png";
 import slogan from "../images/slogan.png";
-import Results from "./Results";
+import Results from "./results";
 import "../components/css/survey.css";
 import "../App.css"
 
