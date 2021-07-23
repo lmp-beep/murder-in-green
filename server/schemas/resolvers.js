@@ -1,7 +1,7 @@
 // import Authentication error from apollo server express
 const { AuthenticationError } = require("apollo-server-express");
 // import user model
-const { User } = require("../models/User");
+const { User } = require("../models");
 // import sign token function from auth
 const { signToken } = require("../utils/auth");
 

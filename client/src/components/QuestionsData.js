@@ -2,7 +2,7 @@ export const QuestionsData = [
   {
     id: 0,
     question: `Choose your Crime`,
-    options: [`A. Murder`, `B. Bank Rovery`, `C. Kidnapping`],
+    options: [`A. Murder`, `B. Bank Robbery`, `C. Kidnapping`],
     answer: [],
   },
   {
