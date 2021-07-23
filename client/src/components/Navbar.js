@@ -1,5 +1,5 @@
 // Savannah changes
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./css/navbar.css";
 import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
@@ -11,9 +11,8 @@ import Auth from "../utils/auth";
 // import LoginForm from "../pages/LoginForm"
 
 const Navbar = () => {
-
   return (
-    <Nav defaultActiveKey="/home" className="flex-column">
+    <Nav defaultActiveKey="/" className="flex-column">
       <Nav.Link as={Link} to="/">
         <img
           src={Mglogo}
@@ -26,7 +25,7 @@ const Navbar = () => {
       {/* display log out, survey when user is log in */}
       {Auth.loggedIn() ? (
         <>
-          <Nav.Link as={Link} to="#/Survey">
+          <Nav.Link as={Link} to="/Survey">
             Survey
           </Nav.Link>
           <Nav.Link onClick={Auth.logout()}>Log Out</Nav.Link>

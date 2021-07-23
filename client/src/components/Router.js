@@ -18,7 +18,6 @@ import SignupForm from "../pages/SignupForm";
 import Survey from "../pages/Survey";
 import Navbar from "./Navbar";
 
-
 const httpLink = createHttpLink({
   uri: "/graphql",
 });
@@ -27,50 +26,49 @@ const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
   const token = localStorage.getItem("id_token");
   // return the headers to the context so httpLink can read them
-    return {
-      headers: {
-        ...headers,
-        authorization: token ? `Bearer ${token}` : "",
-      },
-    };
-  });
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : "",
+    },
+  };
+});
 
-  const client = new ApolloClient({
-    link: authLink.concat(httpLink),
-    cache: new InMemoryCache(),
-  });
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 // import { Grid, Row, Col } from "react-bootstrap";
 
 export default function App() {
   return (
     <ApolloProvider client={client}>
-    <Router>
-      <div>
-        <Navbar />
-        <Header />
+      <Router>
         <div>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/LoginForm">
-              <LoginForm />
-            </Route>
-            <Route exact path="/SignupForm">
-              <SignupForm />
-            </Route>
-            <Route exact path="/Survey">
-              <Survey />
-            </Route>
-            <Route path="*">
-              <Home />
-            </Route>
-          </Switch>
+          <Navbar />
+          <Header />
+          <div>
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route exact path="/LoginForm">
+                <LoginForm />
+              </Route>
+              <Route exact path="/SignupForm">
+                <SignupForm />
+              </Route>
+              <Route exact path="/Survey">
+                <Survey />
+              </Route>
+              <Route path="*">
+                <Home />
+              </Route>
+            </Switch>
+          </div>
         </div>
-      </div>
-    </Router>
+      </Router>
     </ApolloProvider>
-
   );
 }

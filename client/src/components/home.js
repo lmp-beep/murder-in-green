@@ -1,7 +1,6 @@
-// description
-// login button
-// signup button
+
 import React from "react";
+
 import {  Card } from "react-bootstrap";
 import "./css/home.css";
 
