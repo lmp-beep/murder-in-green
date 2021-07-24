@@ -11,12 +11,13 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const server = new ApolloServer({
+  // these will be defined for both new or existing servers
   typeDefs,
   resolvers,
   context: authMiddleware,
 });
 
-server.applyMiddleware({ app });
+server.applyMiddleware({ app }); //app is from an existing express app
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
