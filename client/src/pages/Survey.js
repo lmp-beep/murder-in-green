@@ -99,6 +99,7 @@ export default class Survey extends React.Component {
       );
     }
     return (
+
       <div className="row">
         <div className="col-5">
           <img src={fingerprint} className="fingerprint" alt="" />

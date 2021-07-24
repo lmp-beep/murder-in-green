@@ -1,7 +1,7 @@
 import React from "react";
 // import {useQuery } from "@apollo/client";
 
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, NavLink } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 // import {GET_ALIAS} from "../utils/queries";
@@ -18,6 +18,9 @@ import victim from "../images/chalk-body.png";
 
 import slogan from "../images/slogan.png";
 import fingerprint from "../images/fingerprint.png";
+// import "../App.css"
+import "../components/css/results.css"
+// import { QuestionsData } from "../components/QuestionsData";
 
 export default function Results() {
   // const {data} = useQuery(GET_ALIAS);
@@ -64,9 +67,9 @@ export default function Results() {
           </Card.Text>
           <div className="button">
           {/* <Button variant="danger" >Retake Quiz</Button> */}
-          <Link to="/#/Survey#/Survey" className="btn">
+          <Card.Link as={Link} to="/Survey" className="btn">
             Retake Quiz
-          </Link>
+          </Card.Link>
           </div>
         </Card.Body>
       </Card>

@@ -6,7 +6,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import { setContext } from "@apollo/client/link/context";
 
@@ -57,9 +57,9 @@ export default function App() {
                   <Route exact path="/">
                     <Home />
                   </Route>
-                  <Route exact path="/AboutUs">
+                  {/* <Route exact path="/AboutUs">
                     <AboutUs />
-                  </Route>
+                  </Route> */}
                   <Route exact path="/LoginForm">
                     <LoginForm />
                   </Route>

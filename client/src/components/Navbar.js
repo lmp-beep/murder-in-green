@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+// Savannah changes
+import React from "react";
 import "./css/navbar.css";
 import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 
 import Mglogo from "../images/mglogo.png";
 import GitHub from "../images/github.png";
-import GitHub2 from "../images/github2.png";
+// import GitHub2 from "../images/github2.png";
 import Auth from "../utils/auth";
 
 // import SignupForm from "../pages/SignupForm"
@@ -13,7 +14,7 @@ import Auth from "../utils/auth";
 
 const Navbar = () => {
   return (
-    <Nav defaultActiveKey="/home" className="flex-column">
+    <Nav defaultActiveKey="/" className="flex-column">
       <Nav.Link as={Link} to="/">
         <img id="logo" src={Mglogo} alt="Murdering green logo" />
       </Nav.Link>
@@ -24,17 +25,19 @@ const Navbar = () => {
       {/* display log out, survey when user is log in */}
       {Auth.loggedIn() ? (
         <>
-          <Nav.Link as={Link} to="#/Survey" className="nav-text">
+          <Nav.Link as={Link} to="/Survey" className="nav-text">
             Survey
           </Nav.Link>
-          <Nav.Link onClick={Auth.logout()} className="nav-text">
+          <Nav.Link onClick={() => Auth.logout()} className="nav-text">
             Log Out
           </Nav.Link>
         </>
       ) : (
-        <Nav.Link as={Link} to="/LoginForm" className="nav-text">
-          Log In
-        </Nav.Link>
+        <>
+          <Nav.Link as={Link} to="/LoginForm" className="nav-text">
+            Log In
+          </Nav.Link>
+        </>
       )}
       <Nav.Link
         href="https://github.com/lmp-beep/murder-in-green"
