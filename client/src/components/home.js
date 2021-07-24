@@ -1,6 +1,7 @@
-
 import React from "react";
 import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 import "./css/home.css";
 
 import fingerprint from "../images/fingerprint.png";
@@ -29,10 +30,10 @@ function home() {
             {/* </p> */}
           </Card.Text>
           <h6>Let’start from a public or borrowed computer.</h6>
-          <Card.Link className="home-links" href="#/SignupForm">
+          <Card.Link className="home-links" as={Link} to="/SignupForm">
             Create an Account
           </Card.Link>
-          <Card.Link className="home-links" href="#/LoginForm">
+          <Card.Link className="home-links" as={Link} to="/LoginForm">
             Log In
           </Card.Link>
         </Card.Body>
