@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   ApolloClient,
   InMemoryCache,
@@ -16,7 +16,9 @@ import LoginForm from "../pages/LoginForm";
 import SignupForm from "../pages/SignupForm";
 import Survey from "../pages/Survey";
 import Navbar from "./Navbar";
-import AboutUs from "../pages/About";
+// import AboutUs from "../pages/About";
+
+// import Auth from '../utils/auth';
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -40,8 +42,10 @@ const client = new ApolloClient({
 });
 
 export default function App() {
+  // const [isLogin] = useState(Auth.loggedIn());
   return (
     <ApolloProvider client={client}>
+
       <Router>
         <Container>
           <Row>
