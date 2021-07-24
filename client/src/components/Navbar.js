@@ -1,7 +1,7 @@
 // Savannah changes
 import React from "react";
 import "./css/navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 
 import Mglogo from "../images/mglogo.png";
@@ -13,6 +13,12 @@ import Auth from "../utils/auth";
 // import LoginForm from "../pages/LoginForm"
 
 const Navbar = () => {
+
+  const history = useHistory();
+  const logoutHandler = () => {
+    Auth.logout();
+    history.push("/");
+  };
   return (
     <Nav defaultActiveKey="/" className="flex-column">
       <Nav.Link as={Link} to="/">
@@ -23,12 +29,12 @@ const Navbar = () => {
         About Us
       </Nav.Link>
       {/* display log out, survey when user is log in */}
-      {Auth.loggedIn() ? (
+      {true? (
         <>
           <Nav.Link as={Link} to="/Survey" className="nav-text">
             Survey
           </Nav.Link>
-          <Nav.Link onClick={() => Auth.logout()} className="nav-text">
+          <Nav.Link onClick={() => logoutHandler()} className="nav-text">
             Log Out
           </Nav.Link>
         </>

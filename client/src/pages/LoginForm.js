@@ -38,6 +38,7 @@ const LoginForm = () => {
       });
       Auth.login(data.login.token);
       // console.log(history)
+      //create state 
       history.push('/Survey')
     } catch (err) {
       console.error(err);
