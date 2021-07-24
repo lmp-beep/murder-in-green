@@ -1,3 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+.results-card {
+  width: 30rem;
+  height: auto;
+  color: #243950;
+  align-content: center;
+  box-shadow: 5px 5px 10px rgb(192, 189, 189);
+  margin: auto;
+  padding: 10px;
+  border: solid #bbc0c5;
+  border-radius: 12px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+}
+
 li {
-    list-style-type: none;
+  list-style-type: none;
+  padding-top: 7px;
+  text-align: center;
+}
+
+.card-text {
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+.card-title {
+  font-family: "Lato", sans-serif;
+  font-size: 34px;
+  text-align: center;
+}
+
+a.btn {
+  background-color: red;
+  color: white;
+}
+
+.button {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+a.btn:hover {
+  color: white;
 }

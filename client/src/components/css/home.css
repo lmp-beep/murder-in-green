@@ -1,30 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
-.home-title{
-    font-family: 'Exo 2', sans-serif;
-    font-size: 25pt;
-    text-align: center;
-	padding-bottom: 2%;
-    color:  #243950;
+.title {
+  padding-top: 50px;
+  width: 75%;
+  padding-left: 15%;
 }
-.home-card{
-	color:  #243950;
-    align-content: center;
-    box-shadow: 5px 5px 10px rgb(192, 189, 189);
-    margin:auto;
-    padding: 10px;
-    border: solid #bbc0c5;
-    border-radius: 12px;
-    text-align: center;
-    font-family: 'Exo 2', sans-serif;
+
+.fingerprint {
+  width: 130%;
+  position: relative;
+  z-index: 3;
+  padding-right: 20px;
+}
+
+.slogan {
+  width: 100%;
+}
+
+.row {
+  padding: 0 30px;
+}
+
+.home-title {
+  font-size: 25pt;
+  text-align: center;
+  padding-bottom: 2%;
+  color: #243950;
+}
+.home-card {
+  color: #243950;
+  align-content: center;
+  box-shadow: 5px 5px 10px rgb(192, 189, 189);
+  margin: auto;
+  padding: 10px;
+  border: solid #bbc0c5;
+  border-radius: 12px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
 }
 
 .home-text {
-    font-size: 16pt;
-    padding-bottom:2%;
+  font-size: 16pt;
+  padding-bottom: 2%;
 }
 
-.home-links{
-	color:#007E18 ;
-	font-size: 15pt;
+.home-links {
+  color: #007e18;
+  font-size: 15pt;
+}
+
+.home-links:hover {
+  color: red;
+  text-decoration: underline;
 }

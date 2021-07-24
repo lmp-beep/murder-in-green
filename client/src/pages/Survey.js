@@ -1,12 +1,11 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
 
-import {QuestionsData} from "../components/QuestionsData";
+import { QuestionsData } from "../components/QuestionsData";
 import fingerprint from "../images/fingerprint.png";
 import slogan from "../images/slogan.png";
 import Results from "./results";
 import "../components/css/survey.css";
-import "../App.css"
 
 export default class Survey extends React.Component {
   constructor(props) {
@@ -21,7 +20,7 @@ export default class Survey extends React.Component {
     };
   }
 
-  //component that holds the current survey 
+  //component that holds the current survey
   loadSurvey = () => {
     const { currentIndex } = this.state;
     this.setState(() => {
@@ -41,18 +40,18 @@ export default class Survey extends React.Component {
     });
   };
 
-//   nextQuestionHander = () => {
-//     const {userAnswer, answer, score} = this.state
-//     this.setState({
-//         currentIndex: this.state.currentIndex + 1
-//     })
-//   //Check if correct answer and increment score
-//   if(userAnswer === answer){
-//       this.setState({
-//           score: score + 1
-//       })
-//   }
-// }
+  //   nextQuestionHander = () => {
+  //     const {userAnswer, answer, score} = this.state
+  //     this.setState({
+  //         currentIndex: this.state.currentIndex + 1
+  //     })
+  //   //Check if correct answer and increment score
+  //   if(userAnswer === answer){
+  //       this.setState({
+  //           score: score + 1
+  //       })
+  //   }
+  // }
 
   //calls the loadSurvey function when the app starts
   componentDidMount() {
@@ -91,37 +90,45 @@ export default class Survey extends React.Component {
 
   render() {
     const { question, options, currentIndex, userAnswer, surveyEnd } =
-      this.state;//get the current state
-      if (surveyEnd) {
-        return(
-          <div>
-            <Results/>
-          </div>
-        )
-      }
+      this.state; //get the current state
+    if (surveyEnd) {
+      return (
+        <div>
+          <Results />
+        </div>
+      );
+    }
     return (
       <div className="row">
         <div className="col-5">
           <img src={fingerprint} className="fingerprint" alt="" />
           <img src={slogan} className="slogan" alt="" />
         </div>
-        <Card className="survey-card" style={{ width: "30rem", height: "35rem" }}>
+        <Card
+          className="survey-card"
+          style={{ width: "30rem", height: "35rem" }}
+        >
           <Card.Body>
-                <h2 className="instructions"> Alias!!! Let's calculate your Carbon FingerPrint one Crime at a time...
-                </h2>
-                <p className="instructionsB"> by choosing one option per question
-                </p>
-                <hr size="5" ></hr>
+            <h2 className="instructions">
+              {" "}
+              Alias!!! <br></br>Let's calculate your Carbon FingerPrint one
+              Crime at a time...
+            </h2>
+            <p className="instructionsB">
+              {" "}
+              by choosing one option per question
+            </p>
+            <hr size="5"></hr>
             <Card.Title className="question">{question}</Card.Title>
-            <Card.Text className= "survey-text">
+            <Card.Text className="survey-text">
               {options.map((option) => (
                 <li
-                key={option.id}
-                className={`options ${
+                  key={option.id}
+                  className={`options ${
                     userAnswer === option ? "selected" : null
                   }`}
                   onClick={() => this.checkAnswer(option)}
-                  >
+                >
                   {option}
                 </li>
               ))}
@@ -142,7 +149,6 @@ export default class Survey extends React.Component {
                 disable={this.state.disabled}
                 onClick={this.finishHandler}
                 variant="danger"
-
               >
                 Submit
               </Button>
@@ -153,4 +159,3 @@ export default class Survey extends React.Component {
     );
   }
 }
-
