@@ -2,77 +2,82 @@
 
 /* styling title for login & create account title */
 .login-title {
-    font-family: 'Lato', sans-serif;
-    font-size: 25pt;
-    text-align: center;
-    padding-top: 7%;
-    color:  #243950;
-
+  font-family: "Lato", sans-serif;
+  font-size: 25pt;
+  text-align: center;
+  padding-top: 7%;
+  color: #243950;
 }
 
 /* styling log in and create account card*/
-.login-card{
-    color:  #243950;
-    align-content: center;
-    box-shadow: 5px 5px 10px rgb(192, 189, 189);
-    margin:auto;
-    padding: 10px;
-    border: solid #bbc0c5;
-    border-radius: 12px;
- }
+.login-card {
+  color: #243950;
+  align-content: center;
+  box-shadow: 5px 5px 10px rgb(192, 189, 189);
+  margin: auto;
+  padding: 10px;
+  border: solid #bbc0c5;
+  border-radius: 12px;
+}
 
- /* styling log in & create account content */
- .login-form { 
-    font-family: 'Lato', sans-serif;
-    font-size: 15pt;
-    color:  #243950;
-    padding-bottom: 10%;
-    /* padding-top: 5%; */
+/* styling log in & create account content */
+.login-form {
+  font-family: "Lato", sans-serif;
+  font-size: 15pt;
+  color: #243950;
+  padding-bottom: 10%;
+  /* padding-top: 5%; */
 }
 
 /* login & create account submit bt */
-.bt-login { 
-    /* padding-top: 10%; */
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12pt;
-    align-content: center;
-    text-align: center;
-    margin: auto;
-    padding: 10px;
-    display: flex;   
-    background-color: #EE2026;
-    border-radius: 7px;
-    box-shadow: 4px 4px 8px rgb(126, 123, 123);
+.bt-login {
+  /* padding-top: 10%; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+  align-content: center;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  background-color: #ee2026;
+  border-radius: 7px;
+  box-shadow: 4px 4px 8px rgb(126, 123, 123);
 }
 /* password instructions for login & create account*/
 .password-inst {
-    font-family: 'Lato', sans-serif;
-    font-size: 9pt;
-    padding-bottom: 7%;
-    padding-left: 5%;
-    color:  #89949e;
+  font-family: "Lato", sans-serif;
+  font-size: 9pt;
+  padding-bottom: 7%;
+  padding-left: 5%;
+  color: #89949e;
 }
 /* password input field */
-.password, .email, .alias { 
-    padding-top: 3%;
-    padding-left: 4%;
-    padding-right: 4%;
-    /* padding-block: 5%; */
+.password,
+.email,
+.alias {
+  padding-top: 3%;
+  padding-left: 4%;
+  padding-right: 4%;
+  /* padding-block: 5%; */
 }
 /* login create account link styling */
-.create-acc{
-    font-family: 'Lato', sans-serif;
-    font-size: 15pt;
-    color:#007E18 ;
+.create-acc {
+  font-family: "Lato", sans-serif;
+  font-size: 15pt;
+  color: #007e18;
+  text-align: center;
+}
+
+.create-acc:hover {
+  color: red;
+  text-decoration: underline;
 }
 
 /* create account instructions styling */
-.create-acc-inst{
-    font-family: 'Lato', sans-serif;
-    font-size: 12pt;
-    padding-left: 4%;
-    padding-right: 4%;
-    text-align: center;
-
-
+.create-acc-inst {
+  font-family: "Lato", sans-serif;
+  font-size: 12pt;
+  padding-left: 4%;
+  padding-right: 4%;
+  text-align: center;
 }
