@@ -14,7 +14,7 @@ const LoginForm = () => {
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
-  const history = useHistory();
+  // const history = useHistory();
 
   const [login] = useMutation(LOGIN_USER);
 
@@ -31,7 +31,7 @@ const LoginForm = () => {
     if (!userFormData.email && !userFormData.password) {
      return;
     }
-    // added code
+    
     try {
       const { data } = await login({
         variables: { ...userFormData },
@@ -39,7 +39,7 @@ const LoginForm = () => {
       Auth.login(data.login.token);
       // console.log(history)
       //create state 
-      history.push('/Survey')
+      // history.push('/Survey')
     } catch (err) {
       console.error(err);
     }
