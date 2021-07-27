@@ -19,7 +19,7 @@ import victim from "../images/chalk-body.png";
 import slogan from "../images/slogan.png";
 import fingerprint from "../images/fingerprint.png";
 // import "../App.css"
-import "../components/css/results.css"
+import "../components/css/results.css";
 // import { QuestionsData } from "../components/QuestionsData";
 
 export default function Results() {
@@ -32,15 +32,18 @@ export default function Results() {
         <img src={slogan} className="slogan" alt="" />
       </div>
 
-      <Card className="results-card" 
-      // style={{ width: "30rem", height: "30rem" }}
+      <Card
+        className="results-card"
+        // style={{ width: "30rem", height: "30rem" }}
       >
         <Card.Body>
           <Card.Title className="card-title">Thank you!!</Card.Title>
           {/* {userData.username} */}
           <Card.Text className="card-text">
-            <p>We have your results...
-            <br /> Your crime will produce (...) CO2</p>
+            <p>
+              We have your results...
+              <br /> Your crime will produce (...) CO2
+            </p>
             <li>
               <img src={weapon} alt="weapon icon" width="60" height="40" />
             </li>
@@ -66,10 +69,10 @@ export default function Results() {
             </li>
           </Card.Text>
           <div className="button">
-          {/* <Button variant="danger" >Retake Quiz</Button> */}
-          <Card.Link as={Link} to="/Survey" className="btn">
-            Retake Quiz
-          </Card.Link>
+            {/* <Button variant="danger" >Retake Quiz</Button> */}
+            <Card.Link as={Link} to="/Survey" className="btn">
+              Retake Quiz
+            </Card.Link>
           </div>
         </Card.Body>
       </Card>

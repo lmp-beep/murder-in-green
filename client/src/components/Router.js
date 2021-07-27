@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
   ApolloClient,
   InMemoryCache,
@@ -6,9 +6,13 @@ import {
   createHttpLink,
 } from "@apollo/client";
 
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
 import { setContext } from "@apollo/client/link/context";
+import { Container, Row, Col } from "react-bootstrap";
+
+// import Auth from "../utils/auth";
+// import { AuthContext } from "../context";
 
 import Header from "./Header";
 import Home from "./home";
@@ -16,7 +20,7 @@ import LoginForm from "../pages/LoginForm";
 import SignupForm from "../pages/SignupForm";
 import Survey from "../pages/Survey";
 import Navbar from "./Navbar";
-// import AboutUs from "../pages/About";
+import AboutUs from "../pages/About";
 
 // import Auth from '../utils/auth';
 
@@ -43,8 +47,16 @@ const client = new ApolloClient({
 
 export default function App() {
   // const [isLogin] = useState(Auth.loggedIn());
+//   const [isLoggedIn, setLoggedIn] = useState(false);
+//   const login = () => {
+//     setLoggedIn(true);
+//   };
+// const logout = () =>{
+//   setLoggedIn(false);
+// }
   return (
     <ApolloProvider client={client}>
+      {/* <AuthContext.Provider value={isLoggedIn:isLoggedIn, login.login, logout.logout}> */}
 
       <Router>
         <Container>
@@ -61,9 +73,9 @@ export default function App() {
                   <Route exact path="/">
                     <Home />
                   </Route>
-                  {/* <Route exact path="/AboutUs">
+                  <Route exact path="/AboutUs">
                     <AboutUs />
-                  </Route> */}
+                  </Route>
                   <Route exact path="/LoginForm">
                     <LoginForm />
                   </Route>
@@ -82,6 +94,7 @@ export default function App() {
           </Row>
         </Container>
       </Router>
+      {/* </AuthContext.Provider> */}
     </ApolloProvider>
   );
 }

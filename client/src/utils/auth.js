@@ -1,12 +1,8 @@
 import decode from "jwt-decode";
 // import { useHistory } from "react-router-dom";
 
-
-
-
 // create a new class to instantiate for a user
 class AuthService {
-
   // get user data
   getProfile() {
     return decode(this.getToken());
@@ -39,17 +35,15 @@ class AuthService {
   login(idToken) {
     // Saves user token to localStorage
     localStorage.setItem("id_token", idToken);
-
+    window.location.assign("/Survey");
   }
 
   logout() {
-  // const history = useHistory();
+    // const history = useHistory();
     // Clear user token and profile data from localStorage
     localStorage.removeItem("id_token");
     // this will reload the page and reset the state of the application
-    // window.location.assign("/");
-    // history.push('/Survey')
-
+    window.location.assign("/");
   }
 }
 
