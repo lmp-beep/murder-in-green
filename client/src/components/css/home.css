@@ -7,11 +7,10 @@
 }
 
 .fingerprint {
-  width: 120%;
+  width: 130%;
   position: relative;
   z-index: 3;
   padding-right: 20px;
-  padding-top: 40px;
 }
 
 .slogan {
@@ -19,7 +18,7 @@
 }
 
 .row {
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 .home-title {
