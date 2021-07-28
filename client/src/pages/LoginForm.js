@@ -113,7 +113,7 @@ const LoginForm = () => {
               Submit
             </Button>
           </Form>
-          <Card.Link className="create-acc" href="#/SignupForm">
+          <Card.Link className="create-acc" href="/SignupForm">
             Create Account
           </Card.Link>
         </Card>
