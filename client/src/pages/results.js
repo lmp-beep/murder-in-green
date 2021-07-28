@@ -12,7 +12,6 @@ import "../components/css/results.css";
 import weapon from "../images/gun.png";
 import crimeScene from "../images/crime-scene.png";
 import transportation from "../images/car.png";
-import supplies from "../images/supplies.png";
 import disposal from "../images/trashcan.png";
 import victim from "../images/chalk-body.png";
 
@@ -49,9 +48,6 @@ export default function Results() {
                 width="70"
                 height="40"
               />
-            </li>
-            <li>
-              <img src={supplies} alt="weapon icon" width="55" height="40" />
             </li>
             <li>
               <img src={disposal} alt="weapon icon" width="40" height="40" />

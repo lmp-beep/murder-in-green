@@ -28,7 +28,7 @@ const resolvers = {
           data: {
             type: "vehicle",
             distance_unit: "mi",
-            distance_value: distance,
+            distance_value: "50",
             vehicle_model_id: vehicleId,
           },
           headers: {
@@ -36,7 +36,7 @@ const resolvers = {
           },
         });
         // console.log(res.data);
-        return res.data.data.attributes.carbon_lb
+        return res.data.data.attributes.carbon_lb;
       } catch (error) {
         console.log(error);
       }

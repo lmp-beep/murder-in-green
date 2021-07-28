@@ -14,7 +14,7 @@ const typeDefs = gql`
 
   type Query {
     alias: User
-    co2(vehicleId:String, distance:Int):String
+    co2(vehicleId:String):String
   }
 
   type Mutation {
@@ -24,3 +24,4 @@ const typeDefs = gql`
 `;
 
 module.exports = typeDefs;
+// , distance:Int

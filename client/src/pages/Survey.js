@@ -4,8 +4,10 @@ import { Card, Button } from "react-bootstrap";
 import { QuestionsData } from "../components/QuestionsData";
 import fingerprint from "../images/fingerprint.png";
 import slogan from "../images/slogan.png";
-import Results from "./results";
+// import Results from "./results";
 import "../components/css/survey.css";
+
+import victim from "../images/chalk-body.png";
 
 export default class Survey extends React.Component {
   constructor(props) {
@@ -16,7 +18,8 @@ export default class Survey extends React.Component {
       options: [],
       surveyEnd: false,
       disabled: true, //the user can continue until it gives an answer
-      totalCo2: 0,
+      co2: 0, //=score
+      // imgSrc: "",
     };
   }
 
@@ -40,28 +43,27 @@ export default class Survey extends React.Component {
     });
   };
 
-  //   nextQuestionHander = () => {
-  //     const {userAnswer, answer, totalCo2} = this.state
+  // nextQuestionHandler = () => {
+  //   const { userAnswer, answer, co2 } = this.state;
+  //   this.setState({
+  //     currentIndex: this.state.currentIndex + 1,
+  //   });
+  //   //   //Check if correct answer and increment totalCo2
+  //   if () {
   //     this.setState({
-  //         currentIndex: this.state.currentIndex + 1
-  //     })
-  //   //Check if correct answer and increment totalCo2
-  //   if(userAnswer === answer){
-  //       this.setState({
-  //           totalCo2: totalCo2 + 1
-  //       })
+  //       co2: co2 + ,
+  //     });
   //   }
-  // }
+  // };
 
   //calls the loadSurvey function when the app starts
   componentDidMount() {
     this.loadSurvey();
   }
 
-  checkAnswer = (answer) => {
+  calculateCo2 = (option) => {
     this.setState({
-      userAnswer: answer,
-      disabled: false,
+      co2: this.state.co2 + option.co2,
     });
   };
 
@@ -93,11 +95,33 @@ export default class Survey extends React.Component {
       this.state; //get the current state
     if (surveyEnd) {
       return (
-        <div>
-          <Results />
+        // <Results/>
+        <div className="row">
+          <div className="col-5">
+            <img src={fingerprint} className="fingerprint" alt="" />
+            <img src={slogan} className="slogan" alt="" />
+          </div>
+          <Card style={{ width: "30rem", height: "30rem" }}>
+            <Card.Body>
+              <Card.Title>Thank you !!</Card.Title>
+              {/* {userData.username} */}
+              <Card.Text>
+                We have your results...
+                <br /> Your crime will produce {this.state.co2} CO2
+                <ul>
+                  {QuestionsData.map((item, index) => (
+                    <li key={index}>{item.answer}</li>
+                  ))}
+                  <img src={victim} alt="victim icon" width="50" height="40" />
+                </ul>
+              </Card.Text>
+              <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
+          </Card>
         </div>
       );
     }
+
     return (
       <div className="row">
         <div className="col-5">
@@ -123,13 +147,13 @@ export default class Survey extends React.Component {
             <Card.Text className="survey-text">
               {options.map((option) => (
                 <li
-                  key={option.id}
+                  key={option.answer}
                   className={`options ${
-                    userAnswer === option ? "selected" : null
+                    userAnswer === option.answer ? "selected" : null
                   }`}
-                  onClick={() => this.checkAnswer(option)}
+                  onClick={() => this.calculateCo2(option)}
                 >
-                  {option}
+                  {option.answer}
                 </li>
               ))}
             </Card.Text>
