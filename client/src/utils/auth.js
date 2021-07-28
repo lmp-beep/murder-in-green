@@ -1,5 +1,4 @@
 import decode from "jwt-decode";
-// import { useHistory } from "react-router-dom";
 
 // create a new class to instantiate for a user
 class AuthService {
@@ -39,7 +38,6 @@ class AuthService {
   }
 
   logout() {
-    // const history = useHistory();
     // Clear user token and profile data from localStorage
     localStorage.removeItem("id_token");
     // this will reload the page and reset the state of the application

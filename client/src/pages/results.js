@@ -18,13 +18,9 @@ import victim from "../images/chalk-body.png";
 
 import slogan from "../images/slogan.png";
 import fingerprint from "../images/fingerprint.png";
-// import "../App.css"
 import "../components/css/results.css";
-// import { QuestionsData } from "../components/QuestionsData";
 
 export default function Results() {
-  // const {data} = useQuery(GET_ALIAS);
-  // const userData = data?.me || [];
   return (
     <div className="row">
       <div className="col-5">
@@ -32,13 +28,9 @@ export default function Results() {
         <img src={slogan} className="slogan" alt="" />
       </div>
 
-      <Card
-        className="results-card"
-        // style={{ width: "30rem", height: "30rem" }}
-      >
+      <Card className="results-card">
         <Card.Body>
           <Card.Title className="card-title">Thank you!!</Card.Title>
-          {/* {userData.username} */}
           <Card.Text className="card-text">
             <p>
               We have your results...
@@ -69,7 +61,6 @@ export default function Results() {
             </li>
           </Card.Text>
           <div className="button">
-            {/* <Button variant="danger" >Retake Quiz</Button> */}
             <Card.Link as={Link} to="/Survey" className="btn">
               Retake Quiz
             </Card.Link>

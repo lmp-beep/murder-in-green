@@ -1,23 +1,13 @@
-// Savannah changes
 import React from "react";
 import "./css/navbar.css";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Nav from "react-bootstrap/Nav";
 
 import Mglogo from "../images/mglogo.png";
 import GitHub from "../images/github.png";
-// import GitHub2 from "../images/github2.png";
 import Auth from "../utils/auth";
 
-// import SignupForm from "../pages/SignupForm"
-// import LoginForm from "../pages/LoginForm"
-
 const Navbar = () => {
-  // const history = useHistory();
-  // const logoutHandler = () => {
-  //   Auth.logout();
-  //   history.push("/");
-  // };
   return (
     <Nav defaultActiveKey="/" className="flex-column">
       <Nav.Link as={Link} to="/">

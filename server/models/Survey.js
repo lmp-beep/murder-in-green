@@ -1,11 +1,11 @@
-const { Schema } = require('mongoose');
+const { Schema } = require("mongoose");
 
 // This is a subdocument schema, it won't become its own model but we'll use it as the schema for the User's `savedResults` array in User.js
 const SurveySchema = new Schema({
   crime: {
     type: String,
     required: true,
-    },
+  },
   weapon: {
     type: String,
     required: true,
@@ -16,7 +16,17 @@ const SurveySchema = new Schema({
   },
   transportation: {
     type: String,
+    distance_unit: String,
+    distance_value: Number,
+    vehicle_model_id: Number,
     required: true,
+    data: {
+      id: String,//ask if we need this 
+      type: String, //ask if we need this 
+      attributes: {
+       carbon_lb: Number, 
+      }
+    }
   },
   // supplies: {
   //   type: String,
@@ -33,7 +43,7 @@ const SurveySchema = new Schema({
   totalEmissions: {
     type: String,
     required: true,
-  }
+  },
 });
 
 module.exports = SurveySchema;

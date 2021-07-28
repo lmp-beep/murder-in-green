@@ -22,7 +22,6 @@ import Survey from "../pages/Survey";
 import Navbar from "./Navbar";
 import AboutUs from "../pages/About";
 
-// import Auth from '../utils/auth';
 
 const httpLink = createHttpLink({
   uri: "/graphql",
