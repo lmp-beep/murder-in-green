@@ -13,10 +13,10 @@ export default class Survey extends React.Component {
     this.state = {
       userAnswer: null,
       currentIndex: 0,
-      score: 0,
       options: [],
       surveyEnd: false,
       disabled: true, //the user can continue until it gives an answer
+      totalCo2: 0,
     };
   }
 
@@ -32,7 +32,7 @@ export default class Survey extends React.Component {
     });
   };
 
-  // here is where we add the value of CO2 to the answer
+  // here is where we add the value of CO2 to the answer I think
   nextQuestionHandler = () => {
     this.setState({
       currentIndex: this.state.currentIndex + 1,
@@ -41,14 +41,14 @@ export default class Survey extends React.Component {
   };
 
   //   nextQuestionHander = () => {
-  //     const {userAnswer, answer, score} = this.state
+  //     const {userAnswer, answer, totalCo2} = this.state
   //     this.setState({
   //         currentIndex: this.state.currentIndex + 1
   //     })
-  //   //Check if correct answer and increment score
+  //   //Check if correct answer and increment totalCo2
   //   if(userAnswer === answer){
   //       this.setState({
-  //           score: score + 1
+  //           totalCo2: totalCo2 + 1
   //       })
   //   }
   // }
@@ -99,7 +99,6 @@ export default class Survey extends React.Component {
       );
     }
     return (
-
       <div className="row">
         <div className="col-5">
           <img src={fingerprint} className="fingerprint" alt="" />

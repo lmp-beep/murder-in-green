@@ -9,3 +9,10 @@ export const GET_ALIAS = gql`
     }
   }
 `;
+
+export const GET_API_KEY = gql`
+{
+  apiKey {
+  apiKey
+}
+}`

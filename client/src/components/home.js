@@ -18,7 +18,6 @@ function home() {
         <Card.Body>
           <Card.Title className="home-title">Hi There!</Card.Title>
           <Card.Text className="home-text">
-            {/* <p> */}
             Welcome to Murdering Green! <br></br>
             A Carbon FingerPrint Crime Calculator. <br />
             <br />
@@ -27,7 +26,6 @@ function home() {
             <br />
             By taking our quiz, you can find out if your crime is sustainable
             enough to help the planet.
-            {/* </p> */}
           </Card.Text>
           <h6>Let’start from a public or borrowed computer.</h6>
           <Card.Link className="home-links" as={Link} to="/SignupForm">

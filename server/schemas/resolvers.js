@@ -1,3 +1,4 @@
+const axios = require("axios");
 // import Authentication error from apollo server express
 const { AuthenticationError } = require("apollo-server-express");
 // import user model
@@ -9,7 +10,7 @@ const { signToken } = require("../utils/auth");
 // The code below used the user-controller.js as a guide.
 const resolvers = {
   Query: {
-  alias: async (parent, args, context) => {
+    alias: async (parent, args, context) => {
       if (context.user) {
         const userData = await User.findOne({ _id: context.user._id }).select(
           "-__v -password"
@@ -17,6 +18,28 @@ const resolvers = {
         return userData;
       }
       throw new AuthenticationError("You must be logged in!");
+    },
+    co2: async (parent, { vehicleId, distance }) => {
+      const apiKey = process.env.REACT_APP_API_KEY;
+      try {
+        const res = await axios({
+          url: "https://www.carboninterface.com/api/v1/estimates",
+          method: "post",
+          data: {
+            type: "vehicle",
+            distance_unit: "mi",
+            distance_value: distance,
+            vehicle_model_id: vehicleId,
+          },
+          headers: {
+            Authorization: "Bearer " + apiKey,
+          },
+        });
+        // console.log(res.data);
+        return res.data.data.attributes.carbon_lb
+      } catch (error) {
+        console.log(error);
+      }
     },
   },
   Mutation: {

@@ -1,5 +1,5 @@
-import React, {Fragment} from "react";
-import Media from 'react-media';
+import React, { Fragment } from "react";
+import Media from "react-media";
 
 import {
   ApolloClient,
@@ -20,9 +20,7 @@ import Survey from "../pages/Survey";
 import NavbarTop from "./NavbarTop";
 import Navbar from "./Navbar";
 
-// import AboutUs from "../pages/About";
-
-// import Auth from '../utils/auth';
+import AboutUs from "../pages/About";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -49,27 +47,25 @@ export default function App() {
   // const [isLogin] = useState(Auth.loggedIn());
   return (
     <ApolloProvider client={client}>
-
       <Router>
-        
-
-          {/* query breaks:
+        {/* query breaks:
             xs maxWidth 599
             medium minWidth 600, maxWidth 1199
             large minWidth 1200, maxWidth 1399
             xlarge minWidth 1400 */}
 
-          <Media queries={{
+        <Media
+          queries={{
             xs: "(max-width: 599px)",
             small: "(min-width: 600px) and (max-width: 899px)",
             medium: "(min-width: 900px) and (max-width: 1199px)",
             large: "(min-width: 1200px) and (max-width: 1399px)",
-            xlarge: "(min-width: 1400px)"
-          }}>
-            {matches => (
-              <Fragment>
-
-                {matches.xs &&
+            xlarge: "(min-width: 1400px)",
+          }}
+        >
+          {(matches) => (
+            <Fragment>
+              {matches.xs && (
                 <Container>
                   <p>I am xs!</p>
                   <Row>
@@ -80,9 +76,9 @@ export default function App() {
                     <Route exact path="/">
                       <Home />
                     </Route>
-                    {/* <Route exact path="/AboutUs">
+                    <Route exact path="/AboutUs">
                       <AboutUs />
-                    </Route> */}
+                    </Route>
                     <Route exact path="/LoginForm">
                       <LoginForm />
                     </Route>
@@ -96,9 +92,10 @@ export default function App() {
                       <Home />
                     </Route>
                   </Switch>
-                  </Container>}
+                </Container>
+              )}
 
-                {matches.small &&
+              {matches.small && (
                 <Container>
                   <p>I am small!</p>
                   <Row>
@@ -109,9 +106,9 @@ export default function App() {
                     <Route exact path="/">
                       <Home />
                     </Route>
-                    {/* <Route exact path="/AboutUs">
+                    <Route exact path="/AboutUs">
                       <AboutUs />
-                    </Route> */}
+                    </Route>
                     <Route exact path="/LoginForm">
                       <LoginForm />
                     </Route>
@@ -125,122 +122,125 @@ export default function App() {
                       <Home />
                     </Route>
                   </Switch>
-                  </Container>}
-                      
-                  {matches.medium &&
-                  <Container>
-                    <p>I am medium!</p>
-                    <Row>
-                      <Col xs={2}>
-                        <Navbar />
-                      </Col>
-                      <Col xs={10}>
-                        <Row>
-                          <Header />
-                        </Row>
-                        <Row>
-                          <Switch>
-                            <Route exact path="/">
-                              <Home />
-                            </Route>
-                            {/* <Route exact path="/AboutUs">
-                              <AboutUs />
-                            </Route> */}
-                            <Route exact path="/LoginForm">
-                              <LoginForm />
-                            </Route>
-                            <Route exact path="/SignupForm">
-                              <SignupForm />
-                            </Route>
-                            <Route exact path="/Survey">
-                              <Survey />
-                            </Route>
-                            <Route path="*">
-                              <Home />
-                            </Route>
-                          </Switch>
-                        </Row>
-                      </Col>
-                    </Row>
-                  </Container>}
+                </Container>
+              )}
 
-                  {matches.large &&
-                  <Container>
-                    <p>I am large!</p>
-                    <Row>
-                      <Col xs={2}>
-                        <Navbar />
-                      </Col>
-                      <Col xs={10}>
-                        <Row>
-                          <Header />
-                        </Row>
-                        <Row>
-                          <Switch>
-                            <Route exact path="/">
-                              <Home />
-                            </Route>
-                            {/* <Route exact path="/AboutUs">
+              {matches.medium && (
+                <Container>
+                  <p>I am medium!</p>
+                  <Row>
+                    <Col xs={2}>
+                      <Navbar />
+                    </Col>
+                    <Col xs={10}>
+                      <Row>
+                        <Header />
+                      </Row>
+                      <Row>
+                        <Switch>
+                          <Route exact path="/">
+                            <Home />
+                          </Route>
+                          <Route exact path="/AboutUs">
                               <AboutUs />
-                            </Route> */}
-                            <Route exact path="/LoginForm">
-                              <LoginForm />
                             </Route>
-                            <Route exact path="/SignupForm">
-                              <SignupForm />
-                            </Route>
-                            <Route exact path="/Survey">
-                              <Survey />
-                            </Route>
-                            <Route path="*">
-                              <Home />
-                            </Route>
-                          </Switch>
-                        </Row>
-                      </Col>
-                    </Row>
-                  </Container>}
+                          <Route exact path="/LoginForm">
+                            <LoginForm />
+                          </Route>
+                          <Route exact path="/SignupForm">
+                            <SignupForm />
+                          </Route>
+                          <Route exact path="/Survey">
+                            <Survey />
+                          </Route>
+                          <Route path="*">
+                            <Home />
+                          </Route>
+                        </Switch>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Container>
+              )}
 
-                  {matches.xlarge &&
-                  <Container>
-                    <p>I am xlarge!</p>
-                    <Row>
-                      <Col xs={2}>
-                        <Navbar />
-                      </Col>
-                      <Col xs={10}>
-                        <Row>
-                          <Header />
-                        </Row>
-                        <Row>
-                          <Switch>
-                            <Route exact path="/">
-                              <Home />
-                            </Route>
-                            {/* <Route exact path="/AboutUs">
+              {matches.large && (
+                <Container>
+                  <p>I am large!</p>
+                  <Row>
+                    <Col xs={2}>
+                      <Navbar />
+                    </Col>
+                    <Col xs={10}>
+                      <Row>
+                        <Header />
+                      </Row>
+                      <Row>
+                        <Switch>
+                          <Route exact path="/">
+                            <Home />
+                          </Route>
+                          <Route exact path="/AboutUs">
                               <AboutUs />
-                            </Route> */}
-                            <Route exact path="/LoginForm">
-                              <LoginForm />
                             </Route>
-                            <Route exact path="/SignupForm">
-                              <SignupForm />
-                            </Route>
-                            <Route exact path="/Survey">
-                              <Survey />
-                            </Route>
-                            <Route path="*">
-                              <Home />
-                            </Route>
-                          </Switch>
-                        </Row>
-                      </Col>
-                    </Row>
-                  </Container>}
+                          <Route exact path="/LoginForm">
+                            <LoginForm />
+                          </Route>
+                          <Route exact path="/SignupForm">
+                            <SignupForm />
+                          </Route>
+                          <Route exact path="/Survey">
+                            <Survey />
+                          </Route>
+                          <Route path="*">
+                            <Home />
+                          </Route>
+                        </Switch>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Container>
+              )}
 
-              </Fragment>
-            )}
-            </Media>
+              {matches.xlarge && (
+                <Container>
+                  <p>I am xlarge!</p>
+                  <Row>
+                    <Col xs={2}>
+                      <Navbar />
+                    </Col>
+                    <Col xs={10}>
+                      <Row>
+                        <Header />
+                      </Row>
+                      <Row>
+                        <Switch>
+                          <Route exact path="/">
+                            <Home />
+                          </Route>
+                          <Route exact path="/AboutUs">
+                              <AboutUs />
+                            </Route>
+                          <Route exact path="/LoginForm">
+                            <LoginForm />
+                          </Route>
+                          <Route exact path="/SignupForm">
+                            <SignupForm />
+                          </Route>
+                          <Route exact path="/Survey">
+                            <Survey />
+                          </Route>
+                          <Route path="*">
+                            <Home />
+                          </Route>
+                        </Switch>
+                      </Row>
+                    </Col>
+                  </Row>
+                </Container>
+              )}
+            </Fragment>
+          )}
+        </Media>
       </Router>
     </ApolloProvider>
   );

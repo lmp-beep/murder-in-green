@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button, Alert, Card } from "react-bootstrap";
 import { useMutation } from "@apollo/client";
-import { useHistory } from "react-router-dom";
 
 import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
@@ -14,7 +13,6 @@ const LoginForm = () => {
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });
   const [validated] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
-  // const history = useHistory();
 
   const [login] = useMutation(LOGIN_USER);
 
@@ -29,17 +27,14 @@ const LoginForm = () => {
     // check if form has everything (as per react-bootstrap docs)
     //const form = event.currentTarget;
     if (!userFormData.email && !userFormData.password) {
-     return;
+      return;
     }
-    
+
     try {
       const { data } = await login({
         variables: { ...userFormData },
       });
       Auth.login(data.login.token);
-      // console.log(history)
-      //create state 
-      // history.push('/Survey')
     } catch (err) {
       console.error(err);
     }

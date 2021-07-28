@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Form, Button, Alert, Card } from "react-bootstrap";
 import { useMutation } from "@apollo/client";
-// import { useHistory } from "react-router-dom";
 
 
 import { ADD_USER } from "../utils/mutations";
@@ -24,8 +23,6 @@ const SignupForm = () => {
 
   //Adduser mutuation functionality
   const [addUser] = useMutation(ADD_USER);
-  // const history = useHistory();
-
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -44,9 +41,7 @@ const SignupForm = () => {
       const { data } = await addUser({
         variables: { ...userFormData },
       });
-      // console.log(data);
       Auth.login(data.addUser.token);
-      // history.push('/Survey')
     } catch (err) {
       console.error(err);
     }
