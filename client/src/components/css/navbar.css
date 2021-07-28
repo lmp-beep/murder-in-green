@@ -12,17 +12,17 @@
 }
 
 #logo {
-  width: 130px;
+  width: 120px;
   margin: auto;
   padding-top: 10px;
-  padding-left: 15%;
+  padding-left: 10%;
 }
 
-#gitHub {
-  width: 50px;
+/* #gitHub {
+  width: 40px;
   margin: auto;
-  padding-top: 300px;
-}
+  padding-top: 200px;
+} */
 
 .nav-text {
   font-family: "Lato", sans-serif;
@@ -44,8 +44,8 @@
 }
 
 #github-logo {
-  width: 130px;
+  width: 120px;
   margin: auto;
   padding-top: 250%;
-  padding-left: 20%;
+  padding-left: 10%;
 }
