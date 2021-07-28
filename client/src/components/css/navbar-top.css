@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+.flex-column {
+  background-color: rgb(158, 158, 158);
+  height: 110%;
+}
+
+.nav-link {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 28px;
+}
+
+#logo {
+  width: 130px;
+  margin: auto;
+  padding-top: 10px;
+  padding-left: 15%;
+}
+
+/* #gitHub {
+  width: 50px;
+  margin: auto;
+  padding-top: 300px;
+} */
+
+.nav-text {
+  font-family: "Lato", sans-serif;
+  font-size: 28px;
+  text-align: center;
+  color: white;
+}
+
+.nav-text:hover {
+  color: red;
+}
+
+.nav-text:visited {
+  text-decoration: none;
+}
+
+.nav-text:active {
+  color: red !important;
+}
+
+#github-logo {
+  width: 80%;
+  /* width: 130px; */
+  margin: auto;
+  padding-top: 200%;
+  padding-left: 20%;
+}
