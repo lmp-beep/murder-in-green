@@ -6,6 +6,8 @@ import fingerprint from "../images/fingerprint.png";
 import slogan from "../images/slogan.png";
 // import Results from "./results";
 import "../components/css/survey.css";
+import "../components/css/results.css";
+import CrimeSceneTape from "../images/CrimeSceneTape.png";
 
 import victim from "../images/chalk-body.png";
 
@@ -101,21 +103,41 @@ export default class Survey extends React.Component {
             <img src={fingerprint} className="fingerprint" alt="" />
             <img src={slogan} className="slogan" alt="" />
           </div>
-          <Card style={{ width: "30rem", height: "30rem" }}>
+          <Card
+            className="results-card"
+            style={{
+              width: "30rem",
+              height: "35rem",
+              backgroundImage: `url(${CrimeSceneTape})`,
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+            }}
+          >
             <Card.Body>
-              <Card.Title>Thank you !!</Card.Title>
+              {/* <Card.Title>Thank you !!</Card.Title> */}
               {/* {userData.username} */}
               <Card.Text>
-                We have your results...
-                <br /> Your crime will produce {this.state.co2} CO2
+                {/* We have your results...
+                <br />  */}
+                <h3 classname="results-text">Your crime will produce </h3>
+                <h4 className="results-total">{this.state.co2} CO2</h4>
                 <ul>
                   {QuestionsData.map((item, index) => (
                     <li key={index}>{item.answer}</li>
                   ))}
-                  <img src={victim} alt="victim icon" width="50" height="40" />
                 </ul>
+                <img src={victim} className="victim" alt="victim icon" width="270" height="40"/>
+                <p className="murder-text">Since you chose murder, we deducted the amount of CO2 that the victim will produce.</p> 
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+               <Button
+                className="restart-btn"
+                disable={this.state.disabled}
+                onClick={this.loadSurvey}
+                variant="danger"
+              >
+                Retake Survey
+              </Button>
             </Card.Body>
           </Card>
         </div>

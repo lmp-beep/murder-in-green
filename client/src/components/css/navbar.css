@@ -29,17 +29,20 @@
   color: red;
 }
 
-.nav-text:visited {
+.nav-text:visited,
+.nav-text:focus,
+.nav-text:active {
   text-decoration: none;
+  color: white;
 }
 
 .nav-text:active {
-  color: red !important;
+  color: white;
 }
 
 #github-logo {
   width: 130px;
   margin: auto;
   padding-top: 250%;
-  padding-left: 20%;
+  padding-left: 15%;
 }
