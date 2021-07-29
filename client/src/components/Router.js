@@ -67,7 +67,6 @@ export default function App() {
             <Fragment>
               {matches.xs && (
                 <Container>
-                  <p>I am xs!</p>
                   <Row>
                     <NavbarTop />
                     <Header />
@@ -97,7 +96,6 @@ export default function App() {
 
               {matches.small && (
                 <Container>
-                  <p>I am small!</p>
                   <Row>
                     <NavbarTop />
                     <Header />
@@ -127,7 +125,6 @@ export default function App() {
 
               {matches.medium && (
                 <Container>
-                  <p>I am medium!</p>
                   <Row>
                     <Col xs={2}>
                       <Navbar />
@@ -165,7 +162,6 @@ export default function App() {
 
               {matches.large && (
                 <Container>
-                  <p>I am large!</p>
                   <Row>
                     <Col xs={2}>
                       <Navbar />
@@ -203,7 +199,6 @@ export default function App() {
 
               {matches.xlarge && (
                 <Container>
-                  <p>I am xlarge!</p>
                   <Row>
                     <Col xs={2}>
                       <Navbar />
