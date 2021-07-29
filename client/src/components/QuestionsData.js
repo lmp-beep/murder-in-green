@@ -19,7 +19,7 @@ export const QuestionsData = [
     options: [
       { answer: "A: Gun", co2: 20 },
       { answer: "B: Knife", co2: 10 },
-      { answer: "C: Wooden Club/Bat", co2: 5 },
+      { answer: "C: Wooden Club / Bat", co2: 5 },
     ],
     imgSrc: weapon,
   },
@@ -28,19 +28,19 @@ export const QuestionsData = [
     question: `Choose the Crime Scene:`,
     imgSrc: crimeScene,
     options: [
-      { answer: `A: The victim's home apartment`, co2: 20 },
-      { answer: "B: Office building", co2: 10 },
+      { answer: `A: Victim's Home`, co2: 20 },
+      { answer: "B: Office Building", co2: 10 },
       { answer: "C: Outside ", co2: 5 },
     ],
   },
   {
     id: 3,
-    question: `Choose the Means of Body Disposal and Evidence:`,
+    question: `Choose the Means of Body and Evidence Disposal:`,
     imgScr: disposal,
     options: [
       { answer: "A: Barrel of Acid", co2: 70 },
       { answer: "B: Fire", co2: 26 },
-      { answer: "C: Bury it in the woods", co2: 15 },
+      { answer: "C: Bury it in the Woods", co2: 15 },
     ],
   },
   {
@@ -48,9 +48,9 @@ export const QuestionsData = [
     question: `Choose the type of vehicle to make your getaway:`,
     imgSrc: transportation,
     options: [
-      { answer: "A: SM Car", co2: 26 },
-      { answer: "B: MD Car", co2: 75 },
-      { answer: "C: LG Car", co2: 120 },
+      { answer: "A: Small Car", co2: 26 },
+      { answer: "B: Medium Car", co2: 75 },
+      { answer: "C: Large Car", co2: 120 },
     ],
   },
 ];

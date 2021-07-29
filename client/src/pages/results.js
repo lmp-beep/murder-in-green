@@ -32,8 +32,9 @@ export default function Results() {
           <Card.Title className="card-title">Thank you!!</Card.Title>
           <Card.Text className="card-text">
             <p>
-              We have your results...
-              <br /> Your crime will produce (...) CO2
+              {/* We have your results... */}
+              {/* <br />  */}
+              Your crime will produce (...) CO2
             </p>
             <li>
               <img src={weapon} alt="weapon icon" width="60" height="40" />
